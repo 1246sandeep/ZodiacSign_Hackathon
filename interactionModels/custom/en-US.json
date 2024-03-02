@@ -1,0 +1,119 @@
+{
+  "interactionModel": {
+    "dialog": {
+      "intents": [
+        {
+          "slots": [
+            {
+              "name": "month",
+              "elicitationRequired": true,
+              "type": "AMAZON.Month",
+              "confirmationRequired": false,
+              "prompts": {
+                "elicitation": "Elicit.Slot.612264168123.251558233856"
+              }
+            },
+            {
+              "name": "day",
+              "elicitationRequired": true,
+              "type": "AMAZON.Ordinal",
+              "confirmationRequired": false,
+              "prompts": {
+                "elicitation": "Elicit.Slot.612264168123.1516940685305"
+              }
+            },
+            {
+              "name": "year",
+              "elicitationRequired": true,
+              "type": "AMAZON.FOUR_DIGIT_NUMBER",
+              "confirmationRequired": false,
+              "prompts": {
+                "elicitation": "Elicit.Slot.612264168123.554335496298"
+              }
+            }
+          ],
+          "name": "zodiacsignintent",
+          "confirmationRequired": false,
+          "prompts": {}
+        }
+      ],
+      "delegationStrategy": "ALWAYS"
+    },
+    "languageModel": {
+      "intents": [
+        {
+          "name": "AMAZON.CancelIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.HelpIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.StopIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.NavigateHomeIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.FallbackIntent",
+          "samples": []
+        },
+        {
+          "slots": [
+            {
+              "name": "month",
+              "type": "AMAZON.Month"
+            },
+            {
+              "name": "day",
+              "type": "AMAZON.Ordinal"
+            },
+            {
+              "name": "year",
+              "type": "AMAZON.FOUR_DIGIT_NUMBER"
+            }
+          ],
+          "name": "zodiacsignintent",
+          "samples": [
+            "I was born on {month} {day} {year}",
+            "I was born on January twenty six ninteen ninty five"
+          ]
+        }
+      ],
+      "types": [],
+      "invocationName": "zodiac sign"
+    },
+    "prompts": [
+      {
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "Please enter the Month your born?"
+          }
+        ],
+        "id": "Elicit.Slot.612264168123.251558233856"
+      },
+      {
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "Please enter date your born on?"
+          }
+        ],
+        "id": "Elicit.Slot.612264168123.1516940685305"
+      },
+      {
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "please enter the year  born on?"
+          }
+        ],
+        "id": "Elicit.Slot.612264168123.554335496298"
+      }
+    ]
+  }
+}
